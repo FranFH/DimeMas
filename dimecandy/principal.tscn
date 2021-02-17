@@ -1,0 +1,637 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://sprites/principal.gd" type="Script" id=1]
+[ext_resource path="res://ventanas/Window_07.png" type="Texture" id=2]
+[ext_resource path="res://ventanas/background.jpg" type="Texture" id=3]
+[ext_resource path="res://ventanas/Window_38.png" type="Texture" id=4]
+[ext_resource path="res://scripts/score right.gd" type="Script" id=5]
+[ext_resource path="res://fonts/Kenney Pixel Square.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://musica/strategy.wav" type="AudioStream" id=7]
+[ext_resource path="res://musica/cinema.wav" type="AudioStream" id=8]
+[ext_resource path="res://scripts/music.gd" type="Script" id=9]
+[ext_resource path="res://ventanas/Window_57.png" type="Texture" id=10]
+[ext_resource path="res://botones/Button_13.png" type="Texture" id=11]
+[ext_resource path="res://scripts/bottom.gd" type="Script" id=12]
+[ext_resource path="res://fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://scripts/score left.gd" type="Script" id=14]
+[ext_resource path="res://scripts/grid.gd" type="Script" id=15]
+[ext_resource path="res://scripts/generadas.gd" type="Script" id=16]
+[ext_resource path="res://fonts/Kenney Future.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://scripts/ice_holder.gd" type="Script" id=18]
+[ext_resource path="res://scripts/slime_holder.gd" type="Script" id=19]
+[ext_resource path="res://scripts/lox_holder.gd" type="Script" id=20]
+[ext_resource path="res://scripts/preguntacontainer.gd" type="Script" id=21]
+[ext_resource path="res://fonts/Kenney High.ttf" type="DynamicFontData" id=22]
+[ext_resource path="res://sprites/especial/azucar.png" type="Texture" id=23]
+[ext_resource path="res://sprites/especial/azucarsugarlow.png" type="Texture" id=24]
+[ext_resource path="res://scripts/ProgressBar.gd" type="Script" id=25]
+[ext_resource path="res://sprites/pregunta.png" type="Texture" id=26]
+[ext_resource path="res://scripts/infobutton.gd" type="Script" id=27]
+[ext_resource path="res://sprites/tabla.jpg" type="Texture" id=28]
+[ext_resource path="res://sprites/Button_08.png" type="Texture" id=29]
+[ext_resource path="res://sprites/Button_53.png" type="Texture" id=30]
+[ext_resource path="res://ventanas/Window_06.png" type="Texture" id=31]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "rotarR"
+tracks/0/type = "value"
+tracks/0/path = NodePath("gener:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -26.0, 21.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("n3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 21.0, -26.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("n2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -26.0, 21.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("n5:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -26.0, 21.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("n4:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 21.0, -26.0 ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 40
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 52
+font_data = ExtResource( 22 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.466667, 0.819608, 0.258824, 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.937255, 0.705882, 0.411765, 1 )
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 13 )
+
+[sub_resource type="Animation" id=16]
+resource_name = "tabla"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("tabla:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 75.1583, 706.489 ), Vector2( 75.158, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("home:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1308.7, 1150.73 ), Vector2( 1308.7, 400 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("regresar:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1313.14, 937.307 ), Vector2( 1313.14, 100 ) ]
+}
+
+[sub_resource type="DynamicFont" id=17]
+size = 37
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 37
+font_data = ExtResource( 17 )
+
+[sub_resource type="Animation" id=19]
+resource_name = "ganar"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("perder:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 34.5356, -761.942 ), Vector2( 6.47582, -51.8034 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "perder"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("perderverdad:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 36.927, -776.292 ), Vector2( 17.7938, -51.6184 ) ]
+}
+
+[node name="game_window" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="mainframe" type="TextureRect" parent="."]
+margin_left = -15.8805
+margin_top = -8.0115
+margin_right = 911.119
+margin_bottom = 646.989
+rect_scale = Vector2( 1.65, 1.09 )
+texture = ExtResource( 2 )
+
+[node name="background" type="TextureRect" parent="."]
+margin_left = 112.782
+margin_top = 104.892
+margin_right = 892.782
+margin_bottom = 557.891
+rect_scale = Vector2( 1.34, 1.03 )
+texture = ExtResource( 3 )
+
+[node name="score right" type="TextureRect" parent="."]
+margin_left = 219.525
+margin_top = 2.50584
+margin_right = 646.525
+margin_bottom = 143.506
+rect_scale = Vector2( 0.6, 0.5 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="scoreR" type="Label" parent="score right"]
+margin_left = 6.36273
+margin_top = -8.70847
+margin_right = 213.363
+margin_bottom = 87.2915
+custom_fonts/font = SubResource( 1 )
+text = "000"
+align = 1
+
+[node name="critic" type="AudioStreamPlayer2D" parent="score right"]
+stream = ExtResource( 7 )
+
+[node name="music" type="AudioStreamPlayer2D" parent="score right"]
+position = Vector2( -365.875, -5.01168 )
+scale = Vector2( 1.66667, 2 )
+stream = ExtResource( 8 )
+script = ExtResource( 9 )
+
+[node name="vida" type="TextureRect" parent="."]
+margin_left = 107.535
+margin_top = 45.1875
+margin_right = 552.535
+margin_bottom = 146.188
+rect_scale = Vector2( 1, 0.65 )
+texture = ExtResource( 10 )
+
+[node name="bottom" type="TextureRect" parent="."]
+margin_left = 557.968
+margin_top = 545.548
+margin_right = 984.968
+margin_bottom = 735.548
+rect_scale = Vector2( 1, 0.4 )
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
+
+[node name="scoreC" type="Label" parent="bottom"]
+margin_left = 54.4054
+margin_top = 11.1953
+margin_right = 369.405
+margin_bottom = 158.195
+custom_fonts/font = SubResource( 2 )
+text = "Carbos
+ totales"
+align = 1
+
+[node name="score left" type="TextureRect" parent="."]
+margin_left = 988.544
+margin_top = 547.375
+margin_right = 1415.54
+margin_bottom = 688.375
+rect_scale = Vector2( 0.6, 0.5 )
+texture = ExtResource( 4 )
+script = ExtResource( 14 )
+
+[node name="scoreL" type="Label" parent="score left"]
+margin_left = 115.923
+margin_top = 16.6062
+margin_right = 314.923
+margin_bottom = 112.606
+custom_fonts/font = SubResource( 3 )
+text = "000"
+align = 1
+
+[node name="grid" type="Node2D" parent="."]
+script = ExtResource( 15 )
+width = 13
+height = 5
+x_start = 150
+y_start = 475
+offset = 80
+y_offset = -1
+empty_spaces = PoolVector2Array( 0, 0, 0, 4, 12, 0, 12, 4 )
+ice_spaces = PoolVector2Array( 0, 0 )
+lock_spaces = PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+slime_spaces = PoolVector2Array( 6, 0, 1, 1, 11, 1, 7, 0, 5, 0, 1, 2, 11, 2 )
+piece_value = 1
+
+[node name="generadas" type="VBoxContainer" parent="grid"]
+editor/display_folded = true
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 16 )
+
+[node name="rotarR" type="AnimationPlayer" parent="grid/generadas"]
+playback_speed = 21.6
+anims/rotarR = SubResource( 4 )
+
+[node name="gener" type="Node2D" parent="grid/generadas"]
+position = Vector2( 1344.64, 191.605 )
+rotation = -0.453786
+
+[node name="n3" type="Node2D" parent="grid/generadas"]
+position = Vector2( 1342.2, 259.524 )
+rotation = 0.366519
+
+[node name="n2" type="Node2D" parent="grid/generadas"]
+position = Vector2( 1343.43, 335.906 )
+rotation = -0.453786
+
+[node name="n4" type="Node2D" parent="grid/generadas"]
+position = Vector2( 1342.78, 409.865 )
+rotation = 0.366519
+
+[node name="n5" type="Node2D" parent="grid/generadas"]
+position = Vector2( 1345.19, 487.558 )
+rotation = -0.453786
+
+[node name="Label" type="Label" parent="grid"]
+margin_left = 1179.0
+margin_top = 173.0
+margin_right = 1246.0
+margin_bottom = 211.0
+custom_fonts/font = SubResource( 5 )
+text = "."
+
+[node name="Label2" type="Label" parent="grid"]
+margin_left = 1175.04
+margin_top = 244.523
+margin_right = 1252.04
+margin_bottom = 276.523
+custom_fonts/font = SubResource( 6 )
+text = "."
+
+[node name="Label3" type="Label" parent="grid"]
+margin_left = 1173.0
+margin_top = 317.0
+margin_right = 1267.0
+margin_bottom = 361.0
+custom_fonts/font = SubResource( 7 )
+text = "."
+
+[node name="Label4" type="Label" parent="grid"]
+margin_left = 1175.0
+margin_top = 396.0
+margin_right = 1244.0
+margin_bottom = 443.0
+custom_fonts/font = SubResource( 8 )
+text = "."
+
+[node name="Label5" type="Label" parent="grid"]
+margin_left = 1173.0
+margin_top = 479.0
+margin_right = 1248.0
+margin_bottom = 508.0
+custom_fonts/font = SubResource( 9 )
+text = "."
+
+[node name="ice_holder" type="Node2D" parent="."]
+script = ExtResource( 18 )
+
+[node name="slime_holder" type="Node2D" parent="."]
+script = ExtResource( 19 )
+
+[node name="lox_holder" type="Node2D" parent="."]
+script = ExtResource( 20 )
+
+[node name="destroytimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="collapsetimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="refill_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="boost" type="Label" parent="."]
+margin_left = 1198.0
+margin_top = 114.0
+margin_right = 1377.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 10 )
+
+[node name="preguntacontainer" type="TextureRect" parent="."]
+margin_left = 31.2887
+margin_top = 442.123
+margin_right = 71.2887
+margin_bottom = 482.123
+rect_scale = Vector2( 0.85, 1 )
+script = ExtResource( 21 )
+
+[node name="pregunta" type="Label" parent="preguntacontainer"]
+visible = false
+margin_left = 1414.37
+margin_top = 75.4176
+margin_right = 1681.37
+margin_bottom = 177.418
+custom_fonts/font = SubResource( 11 )
+text = "."
+
+[node name="tiempo" type="Timer" parent="."]
+autostart = true
+
+[node name="high" type="TextureRect" parent="."]
+margin_left = 597.641
+margin_top = 94.1903
+margin_right = 1109.65
+margin_bottom = 606.19
+rect_rotation = 180.0
+rect_scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 23 )
+
+[node name="loq" type="TextureRect" parent="."]
+margin_left = 99.3726
+margin_top = 38.4928
+margin_right = 611.373
+margin_bottom = 550.493
+rect_scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 24 )
+
+[node name="info" type="TextureButton" parent="."]
+margin_left = -4.08113
+margin_top = 172.768
+margin_right = 35.9189
+margin_bottom = 212.768
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 178.0
+margin_top = 57.0
+margin_right = 528.0
+margin_bottom = 87.0
+custom_styles/fg = SubResource( 12 )
+custom_styles/bg = SubResource( 13 )
+max_value = 150.0
+value = 81.0
+percent_visible = false
+script = ExtResource( 25 )
+
+[node name="nivel" type="Label" parent="."]
+margin_left = 304.626
+margin_top = 63.7717
+margin_right = 425.626
+margin_bottom = 95.7717
+custom_fonts/font = SubResource( 14 )
+text = "Nivel azúcar"
+
+[node name="mg" type="Label" parent="."]
+margin_left = 380.118
+margin_top = 5.46077
+margin_right = 457.118
+margin_bottom = 44.4608
+custom_fonts/font = SubResource( 15 )
+text = "glucosa
+mg/dl"
+
+[node name="infobutton" type="TextureButton" parent="."]
+margin_left = 1105.49
+margin_top = 42.6564
+margin_right = 1617.49
+margin_bottom = 554.656
+rect_scale = Vector2( 0.18, 0.18 )
+texture_normal = ExtResource( 26 )
+script = ExtResource( 27 )
+
+[node name="tabla" type="TextureRect" parent="."]
+margin_left = 75.1583
+margin_top = 706.489
+margin_right = 1355.16
+margin_bottom = 1437.49
+rect_scale = Vector2( 1, 0.9 )
+texture = ExtResource( 28 )
+
+[node name="tablamostrar" type="AnimationPlayer" parent="."]
+anims/tabla = SubResource( 16 )
+
+[node name="regresar" type="TextureButton" parent="."]
+margin_left = 1313.14
+margin_top = 937.307
+margin_right = 1495.14
+margin_bottom = 1127.31
+rect_scale = Vector2( 0.9, 1 )
+texture_normal = ExtResource( 29 )
+
+[node name="home" type="TextureButton" parent="."]
+margin_left = 1308.7
+margin_top = 1150.73
+margin_right = 1491.7
+margin_bottom = 1341.73
+rect_scale = Vector2( 0.9, 1 )
+texture_normal = ExtResource( 30 )
+
+[node name="perder" type="TextureRect" parent="."]
+margin_left = 34.5356
+margin_top = -761.942
+margin_right = 961.536
+margin_bottom = -19.9417
+rect_scale = Vector2( 1.5, 1 )
+texture = ExtResource( 31 )
+
+[node name="home3" type="TextureButton" parent="perder"]
+margin_left = 777.693
+margin_top = 161.974
+margin_right = 960.693
+margin_bottom = 352.974
+rect_scale = Vector2( 0.5, 0.8 )
+texture_normal = ExtResource( 30 )
+
+[node name="ganar" type="Label" parent="perder"]
+margin_left = 176.435
+margin_top = 329.199
+margin_right = 897.435
+margin_bottom = 418.199
+custom_fonts/font = SubResource( 17 )
+text = "Vuelve a Jugar
+El juego es aleatorio!"
+
+[node name="titganar" type="Label" parent="perder"]
+margin_left = 357.138
+margin_top = 42.8565
+margin_right = 619.138
+margin_bottom = 85.8565
+custom_fonts/font = SubResource( 18 )
+text = "¡Ganaste!"
+
+[node name="perderverdad" type="TextureRect" parent="."]
+margin_left = 36.927
+margin_top = -776.292
+margin_right = 963.927
+margin_bottom = -34.292
+rect_scale = Vector2( 1.5, 1 )
+texture = ExtResource( 31 )
+
+[node name="home2" type="TextureButton" parent="perderverdad"]
+margin_left = 776.099
+margin_top = 176.324
+margin_right = 959.099
+margin_bottom = 367.324
+rect_scale = Vector2( 0.5, 0.8 )
+texture_normal = ExtResource( 30 )
+
+[node name="perder2" type="Label" parent="perderverdad"]
+margin_left = 173.247
+margin_top = 356.9
+margin_right = 739.247
+margin_bottom = 445.9
+custom_fonts/font = SubResource( 17 )
+text = "Recuerda controlar 
+tus niveles de azúcar"
+
+[node name="titulo" type="Label" parent="perderverdad"]
+margin_left = 330.032
+margin_top = 41.8578
+margin_right = 592.032
+margin_bottom = 84.8578
+custom_fonts/font = SubResource( 18 )
+text = "¡Perdiste!"
+
+[node name="ganar" type="AnimationPlayer" parent="."]
+anims/ganar = SubResource( 19 )
+
+[node name="perdermsje" type="AnimationPlayer" parent="."]
+anims/perder = SubResource( 20 )
+[connection signal="actualiza_barra" from="grid" to="ProgressBar" method="_on_grid_actualiza_barra"]
+[connection signal="contar" from="grid" to="score right" method="_on_grid_contar"]
+[connection signal="damage_ice" from="grid" to="ice_holder" method="_on_grid_damage_ice"]
+[connection signal="damage_lock" from="grid" to="lox_holder" method="_on_grid_damage_lock"]
+[connection signal="damage_slime" from="grid" to="slime_holder" method="_on_grid_damage_slime"]
+[connection signal="ganar" from="grid" to="." method="_on_grid_ganar"]
+[connection signal="genera_p" from="grid" to="preguntacontainer" method="_on_grid_genera_p"]
+[connection signal="make_ice" from="grid" to="ice_holder" method="_on_grid_make_ice"]
+[connection signal="make_lock" from="grid" to="lox_holder" method="_on_grid_make_lock"]
+[connection signal="make_slime" from="grid" to="slime_holder" method="_on_grid_make_slime"]
+[connection signal="pasarsprite" from="grid" to="grid/generadas" method="_on_grid_pasarsprite"]
+[connection signal="update_score" from="grid" to="score left" method="_on_grid_update_score"]
+[connection signal="remove_slime" from="slime_holder" to="grid" method="_on_slime_holder_remove_slime"]
+[connection signal="new" from="lox_holder" to="grid" method="_on_lox_holder_new"]
+[connection signal="remove_lock" from="lox_holder" to="grid" method="_on_lox_holder_remove_lock"]
+[connection signal="timeout" from="destroytimer" to="grid" method="_on_destroytimer_timeout"]
+[connection signal="timeout" from="collapsetimer" to="grid" method="_on_collapsetimer_timeout"]
+[connection signal="timeout" from="refill_timer" to="grid" method="_on_refill_timer_timeout"]
+[connection signal="timeout" from="tiempo" to="score right" method="_on_tiempo_timeout"]
+[connection signal="timeout" from="tiempo" to="bottom" method="_on_tiempo_timeout"]
+[connection signal="timeout" from="tiempo" to="ProgressBar" method="_on_tiempo_timeout"]
+[connection signal="timeout" from="tiempo" to="grid/generadas" method="_on_tiempo_timeout"]
+[connection signal="timeout" from="tiempo" to="grid" method="_on_tiempo_timeout"]
+[connection signal="contador" from="ProgressBar" to="score right" method="_on_ProgressBar_contador"]
+[connection signal="contador" from="ProgressBar" to="." method="_on_ProgressBar_contador"]
+[connection signal="pressed" from="infobutton" to="." method="_on_infobutton_pressed"]
+[connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="perder/home3" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="perderverdad/home2" to="." method="_on_home_pressed"]

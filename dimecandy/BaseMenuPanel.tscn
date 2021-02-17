@@ -1,0 +1,286 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://scripts/BaseMenuPanel.gd" type="Script" id=1]
+[ext_resource path="res://ventanas/Window_54.png" type="Texture" id=2]
+[ext_resource path="res://sprites/sky.jpg" type="Texture" id=3]
+[ext_resource path="res://ventanas/dulcessonri.png" type="Texture" id=4]
+[ext_resource path="res://ventanas/b67ea539bd967ba01d23794698edfe7c.png" type="Texture" id=5]
+[ext_resource path="res://ventanas/Button_47.png" type="Texture" id=6]
+[ext_resource path="res://scripts/play.gd" type="Script" id=7]
+[ext_resource path="res://ventanas/Button_66.png" type="Texture" id=8]
+[ext_resource path="res://info.gd" type="Script" id=9]
+[ext_resource path="res://ventanas/dime.PNG" type="Texture" id=10]
+[ext_resource path="res://ventanas/sd.png" type="Texture" id=11]
+[ext_resource path="res://sprites/leguminosas/judias.png" type="Texture" id=12]
+[ext_resource path="res://sprites/leche/helado-vanilla.png" type="Texture" id=13]
+[ext_resource path="res://scripts/rotar.gd" type="Script" id=14]
+[ext_resource path="res://sprites/tabla.jpg" type="Texture" id=15]
+[ext_resource path="res://sprites/Button_53.png" type="Texture" id=16]
+[ext_resource path="res://musica/brody.wav" type="AudioStream" id=17]
+[ext_resource path="res://scripts/AudioStreamPlayer2D.gd" type="Script" id=18]
+
+[sub_resource type="Animation" id=1]
+resource_name = "slide"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 533, 0 ), Vector2( 1500, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 140.526, 45.8909 ), Vector2( 1500, 45.891 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect2:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 220.586, 104.126 ), Vector2( 1500, 104.126 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 556, 401 ), Vector2( 1500, 401 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tabla:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1600, 8.634 ), Vector2( 0, 8.634 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("regresar:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1514.35, 461.373 ), Vector2( 1200, 461.373 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("helado:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 786.238, 41.5701 ), Vector2( 1500, 41.57 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("frijol:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1028.28, -106.068 ), Vector2( 1500, -106.068 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "rotar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("helado:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -26.67, 26.66 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("frijol:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 11.83, -28.17 ]
+}
+
+[node name="BaseMenuPanel" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="main" type="TextureRect" parent="."]
+margin_left = -15.8668
+margin_top = -3.17334
+margin_right = 587.133
+margin_bottom = 684.827
+rect_scale = Vector2( 2.52, 1.05 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/slide = SubResource( 1 )
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = 2.01381
+margin_top = 2.29634
+margin_right = 962.014
+margin_bottom = 543.296
+rect_scale = Vector2( 1.485, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -207.0
+margin_top = -348.0
+margin_right = 207.0
+margin_bottom = 78.0
+
+[node name="slogan2" type="TextureRect" parent="VBoxContainer"]
+margin_right = 414.0
+margin_bottom = 65.0
+texture = ExtResource( 4 )
+
+[node name="slogan" type="TextureRect" parent="VBoxContainer"]
+margin_top = 69.0
+margin_right = 414.0
+margin_bottom = 134.0
+texture = ExtResource( 5 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -184.0
+margin_top = -295.0
+margin_right = 469.0
+margin_bottom = 37.0
+
+[node name="play" type="TextureButton" parent="HBoxContainer"]
+margin_right = 182.0
+margin_bottom = 332.0
+texture_normal = ExtResource( 6 )
+script = ExtResource( 7 )
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
+margin_left = 186.0
+margin_right = 368.0
+margin_bottom = 332.0
+texture_normal = ExtResource( 8 )
+script = ExtResource( 9 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 220.586
+margin_top = 104.126
+margin_right = 501.586
+margin_bottom = 436.126
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 140.526
+margin_top = 45.8909
+margin_right = 1340.53
+margin_bottom = 1245.89
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 11 )
+
+[node name="frijol" type="TextureRect" parent="."]
+margin_left = 1028.28
+margin_top = -106.068
+margin_right = 1540.28
+margin_bottom = 405.932
+rect_rotation = 11.83
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 250, 250 )
+texture = ExtResource( 12 )
+
+[node name="helado" type="TextureRect" parent="."]
+margin_left = 765.955
+margin_top = 29.4348
+margin_right = 1277.96
+margin_bottom = 541.435
+rect_rotation = -26.67
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 250, 250 )
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
+
+[node name="siguiente" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="tabla" type="TextureRect" parent="."]
+margin_left = 1600.0
+margin_top = 8.634
+margin_right = 2472.0
+margin_bottom = 528.634
+rect_scale = Vector2( 1, 0.9 )
+texture = ExtResource( 15 )
+
+[node name="regresar" type="TextureButton" parent="."]
+margin_left = 1514.35
+margin_top = 461.373
+margin_right = 1697.35
+margin_bottom = 652.373
+texture_normal = ExtResource( 16 )
+
+[node name="figuras" type="AnimationPlayer" parent="."]
+playback_speed = 21.57
+anims/rotar = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 17 )
+autoplay = true
+script = ExtResource( 18 )
+[connection signal="pressed" from="HBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="press" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_press"]
+[connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
